@@ -1,4 +1,4 @@
-# Realtime Web App Vervoerregio Amsterdsm
+# Realtime Web App Vervoerregio Amsterdam
 <!-- Geef je project een titel en schrijf in één zin wat het is -->
 
 ## Inhoudsopgave

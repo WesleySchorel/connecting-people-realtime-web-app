@@ -24,9 +24,10 @@
 ## Wireflow en Breakdownschets
 
 ![alt text](https://media.discordapp.net/attachments/1082263300424876104/1108320436137250826/20230517_110856.jpg?width=1177&height=585)
-Hier boven staat de
+Hier boven staat de Wireflow die we hebben gemaakt, hierin laten we de verschillende states zien die je kunt krijgen op de real time pagina.
 
 ![alt text]([https://media.discordapp.net/attachments/1082263300424876104/1108320436137250826/20230517_110856.jpg?width=1177&height=585])
+Hier boven staat de breakdown schets, hierin kun je de code zien die wij denken te gebruiken voor deze pagina.
 
 ## Installatie
 <!-- Bij Instalatie staat hoe een andere developer aan jouw repo kan werken -->

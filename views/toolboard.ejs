@@ -14,14 +14,14 @@
         </div>
     </div>
 
-    <section class="huidigURL">
+    <section class="online huidigURL">
         <article>
             <h2><%= checkData.url.website.titel %></h2>
             <a class="websites__link" target="_blank" href="<%= checkData.url.url %>"><%= checkData.url.url %></a>
         </article>
     </section>
 
-    <section class="instrumentarium-container">
+    <section class="online instrumentarium-container">
         <article>
             <div>
                 <% principe_data.principes.forEach(principe=> { %>
@@ -41,7 +41,13 @@
         </article>
         <%- include('./partials/progressie') %>
     </section>
-
+    <section class="offline">
+        <div>
+            <img class="offline-img" src="/assets/error.svg" alt="">
+            <h3>Er is iets mis gegaan, controleer je internet verbinding</h3>
+            <a href=""><button class="add-button">Opnieuw proberen</button></a>
+        </div>
+    </section>
 </main>
 
 <%- include('./partials/foot') %>

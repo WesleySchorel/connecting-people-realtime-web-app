@@ -25,8 +25,13 @@ console.log(window.navigator.onLine)
 
 if (window.navigator.onLine == true) {
     document.querySelector(".offline").style.display="none";
-    document.querySelector(".uitleg-container").style.display="block";
+    document.querySelector(".online").style.display="block";
 } else {
-    document.querySelector(".uitleg-container").style.display="none";
-    document.querySelector(".offline").style.display="block";
+    document.querySelector(".online").style.display="none";
+    document.querySelector(".offline").style.display="flex";
 }
+
+var loader = document.getElementById("preloader");
+window.addEventListener("load", function(){
+  loader.style.display = "none";
+})

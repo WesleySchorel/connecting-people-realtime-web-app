@@ -13,7 +13,7 @@ Er ging iets mis hoor, sorry. <%= newdata.error %>
             </div>
         </div>
     </section>
-    <section class="formulier-container">
+    <section class="online formulier-container">
         <div class="formulier"> 
             <h2>Partner formulier</h2>
             <form method="post" action="/urltoevoegen">
@@ -31,6 +31,13 @@ Er ging iets mis hoor, sorry. <%= newdata.error %>
                 </div>
                 <input type="submit" />
             </form>
+        </div>
+    </section>
+    <section class="offline">
+        <div>
+            <img class="offline-img" src="/assets/error.svg" alt="">
+            <h3>Er is iets mis gegaan, controleer je internet verbinding</h3>
+            <a href=""><button class="add-button">Opnieuw proberen</button></a>
         </div>
     </section>
 </main>

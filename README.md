@@ -26,7 +26,8 @@
 ![alt text](https://media.discordapp.net/attachments/1082263300424876104/1108320436137250826/20230517_110856.jpg?width=1177&height=585)
 Hier boven staat de Wireflow die we hebben gemaakt, hierin laten we de verschillende states zien die je kunt krijgen op de real time pagina.
 
-![alt text]([https://media.discordapp.net/attachments/1082263300424876104/1108320436137250826/20230517_110856.jpg?width=1177&height=585])
+
+![breakdown](https://github.com/RickVellingaa/connecting-people-realtime-web-app/assets/112857487/378762ae-cf76-4b0a-a09c-0b9a8bce72f1)
 Hier boven staat de breakdown schets, hierin kun je de code zien die wij denken te gebruiken voor deze pagina.
 
 ## Installatie

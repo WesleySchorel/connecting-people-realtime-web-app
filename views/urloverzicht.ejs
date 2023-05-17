@@ -1,0 +1,32 @@
+<%- include('./partials/head') %>
+<%- include('./partials/navigation') %>
+
+<main>
+    <section class="hero-banner" id="projecten"></section>
+    <div class="header-container">
+        <div>
+            <h1>URLS</h1>
+            <p>Dit zijn de URLS van de partner van Vervoerregio Amsterdam.</p>
+            <svg class="cubeimage" viewBox="0 0 34 31" fill="none" xmlns="http://www.w3.org/2000/svg%22%3E">
+                <rect x="11.5" y="8.5" width="22" height="22" stroke="#E30059"/>
+            <rect x="0.5" y="0.5" width="22" height="22" fill="white" stroke="#E30059" stroke-dasharray="2 2"/>
+            </svg>
+        </div>
+    </div>
+    <div class="partner-container">
+        <% partnerData.urls.forEach(url=> { %>
+            <div class="partner-cube">
+                <div class="partner-content">
+                    <h2><%= url.website.titel %></h2>
+                    <a class="partners__link" target="_blank" href="<%= url.url %>"><%= url.url %></a>
+                </div>
+                <section class="check-button">
+                    <a href="/toolboard?id=<%= url.id %>"><img src="/assets/globe-outline.svg" class="globe" alt="check button"></a>
+                </section>
+            </div>
+            <%})%>
+    </div>
+    
+</main>
+
+<%- include('./partials/foot') %>

@@ -1,0 +1,47 @@
+<%- include('./partials/head') %>
+<%- include('./partials/navigation') %>
+
+<main>
+    <section class="hero-banner" id="instrumentarium"></section>
+    <div class="header-container">
+        <div>
+            <h1>Projecten.</h1>
+            <p>Controleer aan de hand van deze criteria of deze partner aan de eisen voldoet.</p>
+            <svg class="cubeimage" viewBox="0 0 34 31" fill="none" xmlns="http://www.w3.org/2000/svg%22%3E">
+                <rect x="11.5" y="8.5" width="22" height="22" stroke="#E30059"/>
+            <rect x="0.5" y="0.5" width="22" height="22" fill="white" stroke="#E30059" stroke-dasharray="2 2"/>
+            </svg>
+        </div>
+    </div>
+
+    <section class="huidigURL">
+        <article>
+            <h2><%= checkData.url.website.titel %></h2>
+            <a class="websites__link" target="_blank" href="<%= checkData.url.url %>"><%= checkData.url.url %></a>
+        </article>
+    </section>
+
+    <section class="instrumentarium-container">
+        <article>
+            <div>
+                <% principe_data.principes.forEach(principe=> { %>
+                    <h3><%= principe.titel %></h3>
+                    <p><%- principe.beschrijving.html %></p>
+                    <% principe.richtlijnen.forEach(richtlijn => { %>
+                    <details onclick="scrollFunction()">
+                        <summary>
+                            <h4><%- richtlijn.titel %></h4>
+                        </summary>        
+                            <div id="info" class="info" id="<%= richtlijn.titel.toLowerCase() %>"><%- richtlijn.uitleg.html %></div>
+                        </details>
+                        <% }) %>
+
+                    <%})%>
+            </div>
+        </article>
+        <%- include('./partials/progressie') %>
+    </section>
+
+</main>
+
+<%- include('./partials/foot') %>

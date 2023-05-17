@@ -1,0 +1,7 @@
+<nav>
+    <h2>Progressie</h2>
+    <% principe_data.principes.forEach(principe=> { %>
+    <p><%= principe.titel %></p>
+    <progress value="70" max="100">70 %</progress>
+    <% }) %>
+</nav>

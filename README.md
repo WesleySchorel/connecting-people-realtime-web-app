@@ -1,6 +1,4 @@
-> _Fork_ deze leertaak en ga aan de slag. Onderstaande outline ga je gedurende deze taak in jouw eigen GitHub omgeving uitwerken. De instructie vind je in: [docs/INSTRUCTIONS.md](docs/INSTRUCTIONS.md)
-
-# Titel
+# Realtime Web App Vervoerregio Amsterdam
 <!-- Geef je project een titel en schrijf in één zin wat het is -->
 
 ## Inhoudsopgave
@@ -23,10 +21,20 @@
 ## Kenmerken
 <!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met JS gedaan en hoe? Misschien heb je iets met NodeJS gedaan, of heb je een framwork of library gebruikt? -->
 
+## Wireflow en Breakdownschets
+
+![alt text](https://media.discordapp.net/attachments/1082263300424876104/1108320436137250826/20230517_110856.jpg?width=1177&height=585)
+Hier boven staat de Wireflow die we hebben gemaakt, hierin laten we de verschillende states zien die je kunt krijgen op de real time pagina.
+
+
+![breakdown](https://github.com/RickVellingaa/connecting-people-realtime-web-app/assets/112857487/378762ae-cf76-4b0a-a09c-0b9a8bce72f1)
+Hier boven staat de breakdown schets, hierin kun je de code zien die wij denken te gebruiken voor deze pagina.
+
 ## Installatie
 <!-- Bij Instalatie staat hoe een andere developer aan jouw repo kan werken -->
 
 ## Bronnen
+[docs/INSTRUCTIONS.md](docs/INSTRUCTIONS.md)
 
 ## Licentie
 

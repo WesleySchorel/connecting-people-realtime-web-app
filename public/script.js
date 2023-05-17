@@ -22,3 +22,11 @@ function scrollFunction() {
 }
 
 console.log(window.navigator.onLine)
+
+if (window.navigator.onLine == true) {
+    document.querySelector(".offline").style.display="none";
+    document.querySelector(".uitleg-container").style.display="block";
+} else {
+    document.querySelector(".uitleg-container").style.display="none";
+    document.querySelector(".offline").style.display="block";
+}

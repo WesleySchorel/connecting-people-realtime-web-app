@@ -449,6 +449,13 @@ form div {
   background-color: var(--c-hover);
 }
 
+/* Offline */
+
+.offline {
+  margin: 6.5em auto .5em auto;
+  width: 100%;
+  height: 100%;
+}
 
 /* BACK TO TOP */
 

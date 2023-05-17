@@ -26,7 +26,7 @@
 ![alt text](https://media.discordapp.net/attachments/1082263300424876104/1108320436137250826/20230517_110856.jpg?width=1177&height=585)
 Hier boven staat de
 
-![alt text]([https://media.discordapp.net/attachments/1082263300424876104/1108320436137250826/20230517_110856.jpg?width=1177&height=585](https://media.discordapp.net/attachments/1082263300424876104/1108333974507507822/breakdown.jpg?width=848&height=581))
+![alt text]([https://media.discordapp.net/attachments/1082263300424876104/1108320436137250826/20230517_110856.jpg?width=1177&height=585])
 
 ## Installatie
 <!-- Bij Instalatie staat hoe een andere developer aan jouw repo kan werken -->

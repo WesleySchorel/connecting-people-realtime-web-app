@@ -21,4 +21,4 @@ function scrollFunction() {
   element.scrollIntoView({behavior: "smooth"});
 }
 
-// console.log(window.navigator.onLine)
+console.log(window.navigator.onLine)

@@ -1,6 +1,7 @@
 // Importeer express uit de node_modules map
 import express from 'express'
 
+const fetch = require("node-fetch");
 const baseURL = 'https://api.vervoerregio-amsterdam.fdnd.nl/api/v1'
 const principes = 'https://api.vervoerregio-amsterdam.fdnd.nl/api/v1/principes'
 const partnerSlug = '/websites'

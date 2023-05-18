@@ -13,7 +13,7 @@
             </svg>
         </div>
     </div>
-    <div class="online partner-container">
+    <div class="partner-container">
         <% partnerData.urls.forEach(url=> { %>
             <div class="partner-cube">
                 <div class="partner-content">
@@ -26,13 +26,6 @@
             </div>
             <%})%>
     </div>
-    <section class="offline">
-        <div>
-            <img class="offline-img" src="/assets/error.svg" alt="">
-            <h3>Er is iets mis gegaan, controleer je internet verbinding</h3>
-            <a href=""><button class="add-button">Opnieuw proberen</button></a>
-        </div>
-    </section>
 </main>
 
 <%- include('./partials/foot') %>

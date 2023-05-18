@@ -25,7 +25,7 @@ console.log(window.navigator.onLine)
 
 if (window.navigator.onLine == true) {
     document.querySelector(".offline").style.display="none";
-    document.querySelector(".online").style.display="block";
+    document.querySelector(".online").style.display="grid";
 } else {
     document.querySelector(".online").style.display="none";
     document.querySelector(".offline").style.display="flex";

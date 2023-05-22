@@ -19,6 +19,17 @@
                 <div class="partner-content">
                     <h2><%= url.website.titel %></h2>
                     <a class="partners__link" target="_blank" href="<%= url.url %>"><%= url.url %></a>
+                    <% let progress; %>
+                         <% if (url.checks.length != 0) { %>
+                            <% progress = url.checks[0].succescriteria.length %> 
+                            <% } else { %>
+                                <% progress = 0; %>
+                                <% } %>
+
+                    <div class="project-progress">
+                        <progress value="<%= progress %>" max="75"></progress>
+                    <p><%= progress %> van de 75</p>
+                    </div>
                 </div>
                 <section class="check-button">
                     <a href="/toolboard?id=<%= url.id %>"><img src="/assets/globe-outline.svg" class="globe" alt="check button"></a>

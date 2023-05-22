@@ -1,6 +1,5 @@
 <%- include('./partials/head') %>
 <%- include('./partials/navigation') %>
-
 <main>
     <section class="hero-banner" id="instrumentarium"></section>
     <div class="header-container">
@@ -16,31 +15,69 @@
 
     <section class="online huidigURL">
         <article>
-            <h2><%= checkData.url.website.titel %></h2>
-            <a class="websites__link" target="_blank" href="<%= checkData.url.url %>"><%= checkData.url.url %></a>
+            <h2><%= currentProject.url.website.titel %></h2>
+            <a class="websites__link" target="_blank" href="<%= currentProject.url.url %>"><%= currentProject.url.url %></a>
         </article>
     </section>
 
-    <section class="instrumentarium-container">
-        <article>
-            <div>
+    <div class="instrumentarium-container">
+        <div class="instrumentarium">
+            <div id="principes">
                 <% principe_data.principes.forEach(principe=> { %>
-                    <h3><%= principe.titel %></h3>
-                    <p><%- principe.beschrijving.html %></p>
-                    <% principe.richtlijnen.forEach(richtlijn => { %>
-                    <details onclick="scrollFunction()">
-                        <summary>
-                            <h4><%- richtlijn.titel %></h4>
-                        </summary>        
-                            <div id="info" class="info" id="<%= richtlijn.titel.toLowerCase() %>"><%- richtlijn.uitleg.html %></div>
-                        </details>
-                        <% }) %>
-
-                    <%})%>
-            </div>
-        </article>
+                    <article class="principe" id="<%= principe.titel.toLowerCase() %>">
+                        <section>
+                            <h3><span>
+                                    <%= principe.titel %>.
+                                </span>Principe <%= principe.index %>
+                            </h3>
+                            <%- principe.beschrijving.html %>
+                        </section>
+                        <section class="richtlijnen">
+                            <% principe.richtlijnen.forEach(richtlijn=> { %>
+                                <details>
+                                    <summary>
+                                        <svg class="arrow" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0.700048 6.69999C0.516715 6.51665 0.425049 6.28332 0.425049 5.99999C0.425049 5.71665 0.516715 5.48332 0.700048 5.29999L5.30005 0.699987C5.40005 0.599987 5.50838 0.528988 5.62505 0.486988C5.74172 0.445655 5.86672 0.424988 6.00005 0.424988C6.13338 0.424988 6.26271 0.449988 6.38805 0.499988C6.51271 0.549988 6.61672 0.616654 6.70005 0.699987L11.3 5.29999C11.4834 5.48332 11.575 5.71665 11.575 5.99999C11.575 6.28332 11.4834 6.51665 11.3 6.69999C11.1167 6.88332 10.8834 6.97499 10.6 6.97499C10.3167 6.97499 10.0834 6.88332 9.90005 6.69999L6.00005 2.79999L2.10005 6.69999C1.91672 6.88332 1.68338 6.97499 1.40005 6.97499C1.11672 6.97499 0.883382 6.88332 0.700048 6.69999V6.69999Z" fill="black"></path>
+                                        </svg>
+                                        <h4><%= richtlijn.titel %></h4>
+                                    </summary>
+                                    
+                                    <div class="info"><%- richtlijn.uitleg.html %></div>
+                                    <section class="succescriteria">
+                                        <% richtlijn.succescriteria.forEach(succescriterium=> { %>
+                                            <details>
+                                                <summary>
+                                                    <svg class="arrow" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M0.700048 6.69999C0.516715 6.51665 0.425049 6.28332 0.425049 5.99999C0.425049 5.71665 0.516715 5.48332 0.700048 5.29999L5.30005 0.699987C5.40005 0.599987 5.50838 0.528988 5.62505 0.486988C5.74172 0.445655 5.86672 0.424988 6.00005 0.424988C6.13338 0.424988 6.26271 0.449988 6.38805 0.499988C6.51271 0.549988 6.61672 0.616654 6.70005 0.699987L11.3 5.29999C11.4834 5.48332 11.575 5.71665 11.575 5.99999C11.575 6.28332 11.4834 6.51665 11.3 6.69999C11.1167 6.88332 10.8834 6.97499 10.6 6.97499C10.3167 6.97499 10.0834 6.88332 9.90005 6.69999L6.00005 2.79999L2.10005 6.69999C1.91672 6.88332 1.68338 6.97499 1.40005 6.97499C1.11672 6.97499 0.883382 6.88332 0.700048 6.69999V6.69999Z" fill="black"></path>
+                                                    </svg>
+                                                    <h5>
+                                                        <%= `${succescriterium.index} ${succescriterium.titel} niveau ${succescriterium.niveau}` %>
+                                                    </h5>
+            
+                                                    <label>
+                                                        <input type="checkbox"
+                                                        <% checkedProjectSuccescriteria.forEach(checkedProjectSuccescriterium => { %>
+                                                            <% if(checkedProjectSuccescriterium.id == succescriterium.id) { %>
+                                                                checked
+                                                                <% } %>
+                                                        <% }) %>
+                                                        >
+                                                    </label>
+                                                </summary>
+                                                <%= succescriterium.id %>
+                                            </details>
+                                            <% }) %>
+                                    </section>
+                                        
+                                </details>
+                                <% }) %>
+                        </section>
+                    </article>
+                    <% }) %>
+                </div>
+        </div>
         <%- include('./partials/progressie') %>
-    </section>
+        </div>
 </main>
-
+<script src="/progressie.js"></script>
 <%- include('./partials/foot') %>

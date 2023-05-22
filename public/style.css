@@ -26,6 +26,10 @@ html {
   background: var(--c-gray);
 }
 
+h1, h2 {
+  color: var(--c-pink);
+}
+
 /* Navigatie */
 
 nav {
@@ -275,7 +279,9 @@ nav li a:hover {
   align-items: center;
 }
 
-
+progress {
+  accent-color: var(--c-pink);
+}
 
 ion-icon {
   color: var(--c-white);
@@ -367,7 +373,7 @@ form div {
   z-index: -1;
 }
 
-.instrumentarium-container article {
+ .instrumentarium {
   display: flex;
   border-radius: 10px;
   width: 100%;
@@ -376,61 +382,29 @@ form div {
   margin-top: 2em;
 }
 
-.instrumentarium-container nav {
-  margin-top: 2em;
-  background-color: white;
-  padding: 2em;
-  border-radius: 10px;
-  z-index: 1;
-  display: block;
-  width: 100%;
-  aspect-ratio: 1/1;
-  max-height: 250px !important;
-}
-
-.instrumentarium-container nav h2 {
-  color: var(--c-pink);
-}
-
-.instrumentarium-container div {
-  padding: 2em;
-}
-
-.instrumentarium-container h3 {
-  color: var(--c-pink);
+.instrumentarium h3 {
   font-size: 1.4em;
+  color: var(--c-pink);
 }
 
-.instrumentarium-container p {
+.instrumentarium p {
   margin-top: 5px;
   font-size: 1.1em;
 }
 
-.instrumentarium-container details {
+.instrumentarium details {
   background: #eee;
   margin-bottom: 2rem;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   border-radius: 10px;
 }
 
-.instrumentarium-container summary {
-  cursor: pointer;
+.instrumentarium div{
+  padding: 2em;
 }
 
-.instrumentarium-container summary>* {
-  display: inline;
-}
-
-.url-cube {
-  background-color: var(--c-white);
-  width: auto;
-  height: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 10px;
-  padding: 2.5rem 2rem;
-
+.instrumentarium .info {
+  padding-bottom: .5em;
 }
 
 .add-button {
@@ -445,6 +419,104 @@ form div {
   font-size: 1em;
 }
 
+.instrumentarium-container nav {
+  margin-top: 2em;
+  background-color: white;
+  padding: 2em;
+  border-radius: 10px;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  aspect-ratio: 1/1;
+  max-height: 250px !important;
+}
+
+.instrumentarium-container nav ol {
+  display: flex;
+  flex-direction: column;
+  gap: var(--small-size);
+  list-style: none;
+}
+
+.instrumentarium-container nav li {
+  background-color: var(--c-white);
+}
+
+.instrumentarium-container nav li a {
+  color: var(--c-black);
+  text-align: left;
+  padding: .25rem 0;
+}
+
+.instrumentarium-container nav li a:hover {
+  background-color: var(--c-white);
+}
+
+.instrumentarium-container summary {
+  cursor: pointer;
+}
+
+.instrumentarium-container summary>* {
+  display: inline;
+}
+
+.richtlijnen {
+  margin-top: 5px;
+}
+
+.richtlijnen summary input {
+  width: 1.2rem;
+  height: 1.2rem;
+  border: 2px solid var(--c-pink);
+  border-radius: 4px;
+  appearance: none;
+  -webkit-appearance: none;
+  transition: .2s;
+  cursor: pointer;
+}
+
+
+
+.richtlijnen summary label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.richtlijnen summary svg.arrow {
+  height: fit-content;
+  transform: rotate(90deg);
+  font-size: var(--medium-size);
+  transition: .2s;
+  margin-right: 10px;
+}
+
+.richtlijnen details[open]>summary svg.arrow {
+  transform: rotate(180deg);
+  transition: .2s;
+}
+
+.richtlijnen summary {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.principe-titel {
+  font-size: 1.1em
+}
+
+.succescriteria h5 {
+  font-size: 1em;
+}
+
+.richtlijnen summary input:checked {
+  box-shadow: inset 0 0 0 20px var(--c-pink);
+}
+
 .add-button:hover {
   background-color: var(--c-hover);
 }
@@ -455,7 +527,7 @@ form div {
   margin: 6.5em auto 3em auto;
   width: 80%;
   height: 100%;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
 }

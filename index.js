@@ -32,13 +32,20 @@ app.get('/projectboard', function (req, res) {
   res.render('projectboard', { partner_data, active: '/projectboard'})
 })
 
-app.get('/toolboard', function (req, res) {
-  let id = req.query.id || "clfqkxaut3kip0bw8ij803sqk"
-  let checkUrl = 'https://api.vervoerregio-amsterdam.fdnd.nl/api/v1/url?id=' + id
-  
-  fetchJson(checkUrl).then((checkData) => {
-    res.render('toolboard', {checkData, principe_data, active: '/toolboard'})
-  })
+app.get('/toolboard', function (request, response) {
+
+let id = request.query.id
+  if (id) {
+    fetchJson(`${baseURL}/url?id=${id}`).then((data) => {
+      if (data.url.checks.length != 0) {
+        response.render('toolboard', { currentProject: data, checkedProjectSuccescriteria: data.url.checks[0].succescriteria, principe_data, active: '/toolboard' })
+      } else {
+        response.render('toolboard', { currentProject: data, checkedProjectSuccescriteria: data.url.checks, principe_data, active: '/toolboard' })
+      }
+    });
+  } else {
+    response.redirect('/projectboard')
+  }
 })
 
 app.get('/urltoevoegen', function (req, res) {

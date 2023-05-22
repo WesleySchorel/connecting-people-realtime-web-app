@@ -325,6 +325,15 @@ select {
   border-radius: 10px;
 }
 
+.instrumentarium .info {
+  padding: 1rem;
+}
+
+.info div {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
 input[type="submit"] {
   color: var(--c-white);
   padding: .5em;
@@ -388,8 +397,8 @@ form div {
 }
 
 .instrumentarium p {
-  margin-top: 5px;
-  font-size: 1.1em;
+  margin-top: 10px;
+  font-size: 1em;
 }
 
 .instrumentarium details {
@@ -399,7 +408,15 @@ form div {
   border-radius: 10px;
 }
 
-.instrumentarium div{
+.instrumentarium form details {
+  margin-bottom: 10px;
+}
+
+.instrumentarium form input[type=submit] {
+  margin-top: 0;
+}
+
+.instrumentarium #principes{
   padding: 2em;
 }
 
@@ -519,6 +536,10 @@ form div {
 
 .add-button:hover {
   background-color: var(--c-hover);
+}
+
+.urlId {
+  display: none;
 }
 
 /* Offline */

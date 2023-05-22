@@ -4,11 +4,13 @@ import fetch from 'node-fetch';
 
 const baseURL = 'https://api.vervoerregio-amsterdam.fdnd.nl/api/v1'
 const principes = 'https://api.vervoerregio-amsterdam.fdnd.nl/api/v1/principes'
+const checks = 'https://api.vervoerregio-amsterdam.fdnd.nl/api/v1/checks'
 const partnerSlug = '/websites'
 const postSlug = '/urls'
 
 const partner_data = await fetch(baseURL + partnerSlug). then((response) => response.json())
 const principe_data = await fetch(principes). then((response) => response.json())
+const check_data = await fetch(checks). then((response) => response.json())
 
 // Maak een nieuwe express app aan
 const app = express()
@@ -44,6 +46,23 @@ let id = request.query.id || "clf7zms5va5670bw8rb7gwll2"
       }
     });
   }
+})
+
+app.post('/toolboard', function(req, res) {
+  const checkURL = 'https://api.vervoerregio-amsterdam.fdnd.nl/api/v1/checks'
+  postJson(checkURL, req.body).then((data) => {
+    let newCheck = { ... req.body }
+    console.log(req.body)
+    console.log(JSON.stringify(data))
+    if (data.data) {
+      res.redirect('/') 
+    } else {
+      const errormessage = `${req.body.url}: Checks zijn al gechecked.`
+      const newdata = { error: errormessage, values: newCheck }
+      
+      res.render('projectboard', {newdata, check_data, partner_data, active: '/projectboard' })
+    }
+  })
 })
 
 app.get('/urltoevoegen', function (req, res) {

@@ -34,7 +34,7 @@ app.get('/projectboard', function (req, res) {
 
 app.get('/toolboard', function (request, response) {
 
-let id = request.query.id
+let id = request.query.id || "clf7zms5va5670bw8rb7gwll2"
   if (id) {
     fetchJson(`${baseURL}/url?id=${id}`).then((data) => {
       if (data.url.checks.length != 0) {
@@ -43,8 +43,6 @@ let id = request.query.id
         response.render('toolboard', { currentProject: data, checkedProjectSuccescriteria: data.url.checks, principe_data, active: '/toolboard' })
       }
     });
-  } else {
-    response.redirect('/projectboard')
   }
 })
 

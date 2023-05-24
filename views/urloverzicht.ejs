@@ -26,10 +26,16 @@
                                 <% progress = 0; %>
                                 <% } %>
 
-                    <div class="project-progress">
-                        <progress value="<%= progress %>" max="75"></progress>
-                    <p><%= progress %> van de 75</p>
-                    </div>
+                    <div class="progress-circle">
+                        <svg class="progress-svg">
+                          <circle class="progress-path" cx="50%" cy="50%" r="40"></circle>
+                          <circle class="progress-fill" cx="50%" cy="50%" r="40"></circle>
+                        </svg>
+                        <div class="progress-text">
+                          <span id="progressNumber" class="progress-value"><%= progress %></span>/75
+                        </div>
+                      </div>
+
                 </div>
                 <section class="check-button">
                     <a href="/toolboard?id=<%= url.id %>"><img src="/assets/globe-outline.svg" class="globe" alt="check button"></a>

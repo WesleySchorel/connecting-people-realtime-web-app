@@ -190,6 +190,7 @@ nav li a:hover {
 .uitleg-container img {
   border-radius: 10px 0 0 10px;
   width: 40%;
+  min-height: 100%;
   object-fit: cover;
   background-color: rgb(193, 193, 193);
 }
@@ -581,6 +582,51 @@ form div {
   height: 100vh;
   position: fixed;
   z-index: 100;
+}
+
+/* PROGRESS */
+
+.progress-circle {
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+
+.progress-svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.progress-path {
+  fill: none;
+  stroke: #f3f3f3;
+  stroke-width: 6;
+}
+
+.progress-fill {
+  fill: none;
+  stroke-width: 6;
+  stroke-dasharray: 251.2;
+  stroke-dashoffset: 0;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+  transition: stroke-dashoffset 1s ease-in-out;
+}
+
+.progress-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+}
+
+.progress-value {
+  display: inline-block;
+  margin-right: 5px;
 }
 
 /* BACK TO TOP */

@@ -38,3 +38,11 @@ if (progressItems >= 0 && progressItems <= 20) {
 }
 
 document.querySelector('.progress-value').textContent = progressItems; // Display the actual number of items
+
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}

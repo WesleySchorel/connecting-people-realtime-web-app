@@ -629,6 +629,20 @@ form div {
   margin-right: 5px;
 }
 
+.progress-total {
+  display: inline-block;
+}
+
+.completion-image {
+  display: none; /* Initially hide the image */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 45px;
+  height: 45px;
+}
+
 /* BACK TO TOP */
 
 .top {

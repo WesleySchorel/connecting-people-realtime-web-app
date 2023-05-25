@@ -17,7 +17,6 @@ window.addEventListener("load", function(){
 
 
 // PROGRESS
-
 const totalItems = 75; // Set the total number of items
 const progressItems = document.getElementById("progressNumber").textContent; // Set the number of items completed
 console.log(progressItems);
@@ -39,10 +38,14 @@ if (progressItems >= 0 && progressItems <= 20) {
 
 document.querySelector('.progress-value').textContent = progressItems; // Display the actual number of items
 
-function openForm() {
-  document.getElementById("myForm").style.display = "block";
-}
+// Check if progressItems reach 100%
+if (progressItems === totalItems) {
+  const completionImage = document.querySelector('.completion-image');
+  completionImage.style.display = 'block'; // Show the completion image
 
-function closeForm() {
-  document.getElementById("myForm").style.display = "none";
+  const progressValue = document.querySelector('.progress-value');
+  progressValue.style.display = 'none'; // Hide the progress value
+
+  const progressTotal = document.querySelector('.progress-total');
+  progressTotal.style.display = 'none'; // Hide the progress total
 }

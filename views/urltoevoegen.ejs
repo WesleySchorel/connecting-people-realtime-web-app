@@ -19,7 +19,7 @@ Er ging iets mis hoor, sorry. <%= newdata.error %>
             <h2>Partner formulier</h2>
             <form method="post" action="/urltoevoegen">
                 <div>
-                    <label for="name">Selecteer een partner<span>(verplicht)</span></label>
+                    <label for="name">Selecteer een partner<small> (verplicht)</small></label>
                     <select id="name" name="websiteId">
                         <% partner_data.websites.forEach(website=> { %>
                         <option value="<%= website.id  %>"><%= website.titel %></option>
@@ -27,7 +27,7 @@ Er ging iets mis hoor, sorry. <%= newdata.error %>
                     </select>
                 </div>
                 <div>
-                    <label for="url">Voeg een nieuwe link toe<span>(verplicht)</span></label>
+                    <label for="url">Voeg een nieuwe link toe<small> (verplicht)</small></label>
                     <input id="url" type="url" required name="url">
                 </div>
                 <input type="submit" />

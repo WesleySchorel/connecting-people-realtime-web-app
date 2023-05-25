@@ -326,6 +326,10 @@ select {
   border-radius: 10px;
 }
 
+form select {
+  margin-bottom: 1rem;
+}
+
 .instrumentarium .info {
   padding: 1rem;
 }

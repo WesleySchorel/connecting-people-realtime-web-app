@@ -690,7 +690,6 @@ form div {
   color: white;
   border: none;
   cursor: pointer;
-  opacity: 0.8;
   position: fixed;
   bottom: 85px;
   right: 20px;
@@ -755,6 +754,10 @@ form div {
 @media screen and (max-width: 1400px) {
   .partner-container {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .partner-container-details {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
@@ -832,10 +835,6 @@ form div {
 
   .header-container div {
     height: auto;
-  }
-
-  .top {
-    display: none;
   }
 }
 

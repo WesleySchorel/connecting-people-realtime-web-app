@@ -1,48 +1,56 @@
 <%- include('./partials/head') %>
-<%- include('./partials/navigation') %>
+    <%- include('./partials/navigation') %>
 
-<main>
-    <section class="hero-banner" id="projecten"></section>
-    <div class="header-container">
-        <div>
-            <h1>URLS</h1>
-            <p>Dit zijn de URLS van de partner van Vervoerregio Amsterdam.</p>
-            <svg class="cubeimage" viewBox="0 0 34 31" fill="none" xmlns="http://www.w3.org/2000/svg%22%3E">
-                <rect x="11.5" y="8.5" width="22" height="22" stroke="#E30059"/>
-            <rect x="0.5" y="0.5" width="22" height="22" fill="white" stroke="#E30059" stroke-dasharray="2 2"/>
-            </svg>
-        </div>
-    </div>
-    <div class="partner-container-details">
-        <% partnerData.urls.forEach(url=> { %>
-            <div class="partner-cube">
-                <div class="partner-content">
-                    <h2><%= url.website.titel %></h2>
-                    <a class="partners__link" target="_blank" href="<%= url.url %>"><%= url.url %></a>
-                    <% let progress; %>
-                         <% if (url.checks.length != 0) { %>
-                            <% progress = url.checks[0].succescriteria.length %> 
-                            <% } else { %>
-                                <% progress = 0; %>
-                                <% } %>
-
-                                <a href="/toolboard?id=<%= url.id %>"><button class="toolboard-button">Toolboard</button></a>
-                </div>
-
-                <div class="progress-circle">
-                    <svg class="progress-svg">
-                      <circle class="progress-path" cx="50%" cy="50%" r="40"></circle>
-                      <circle class="progress-fill" cx="50%" cy="50%" r="40"></circle>
+        <main>
+            <section class="hero-banner" id="projecten"></section>
+            <div class="header-container">
+                <div>
+                    <h1>URLS</h1>
+                    <p>Dit zijn de URLS van de partner van Vervoerregio Amsterdam.</p>
+                    <svg class="cubeimage" viewBox="0 0 34 31" fill="none" xmlns="http://www.w3.org/2000/svg%22%3E">
+                        <rect x="11.5" y="8.5" width="22" height="22" stroke="#E30059" />
+                        <rect x="0.5" y="0.5" width="22" height="22" fill="white" stroke="#E30059"
+                            stroke-dasharray="2 2" />
                     </svg>
-                    <div class="progress-text">
-                      <span id="progressNumber" class="progress-value"><%= progress %></span><span class="progress-total">/75</span>
-                    </div>
-                    <img class="completion-image" src="https://i.imgur.com/kTG7L06.png" alt="Checkmark">
-                  </div>
-
+                </div>
             </div>
-            <%})%>
-    </div>
-</main>
+            <div class="partner-container-details">
+                <% partnerData.urls.forEach(url=> { %>
+                    <div class="partner-cube">
+                        <div class="partner-content">
+                            <h2>
+                                <%= url.website.titel %>
+                            </h2>
+                            <a class="partners__link" target="_blank" href="<%= url.url %>">
+                                <%= url.url %>
+                            </a>
+                            <% let progress; %>
+                                <% if (url.checks.length !=0) { %>
+                                    <% progress=url.checks[0].succescriteria.length %>
+                                        <% } else { %>
+                                            <% progress=0; %>
+                                                <% } %>
 
-<%- include('./partials/foot') %>
+                                                    <a href="/toolboard?id=<%= url.id %>"><button
+                                                            class="toolboard-button">Toolboard</button></a>
+                        </div>
+
+                        <div class="progress-circle">
+                            <svg class="progress-svg">
+                                <circle class="progress-path" cx="50%" cy="50%" r="40"></circle>
+                                <circle class="progress-fill" cx="50%" cy="50%" r="40"></circle>
+                            </svg>
+                            <div class="progress-text">
+                                <span id="progressNumber" class="progress-value">
+                                    <%= progress %>
+                                </span><span class="progress-total">/75</span>
+                            </div>
+                            <img class="completion-image" src="https://i.imgur.com/kTG7L06.png" alt="Checkmark">
+                        </div>
+
+                    </div>
+                    <%})%>
+            </div>
+        </main>
+
+        <%- include('./partials/foot') %>

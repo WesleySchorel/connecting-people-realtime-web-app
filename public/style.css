@@ -646,9 +646,9 @@ form div {
 /* BACK TO TOP */
 
 .top {
-  width: 60px;
-  height: 60px;
-  background: #444444;
+  width: 55px;
+  height: 55px;
+  background: var(--c-blue);
   border-radius: 50%;
   position: fixed;
   bottom: 20px;
@@ -661,16 +661,16 @@ form div {
 
 /* Button used to open the chat form - fixed at the bottom of the page */
 .open-button {
-  background-color: #444444;
+  background-color: var(--c-blue);
   color: white;
   border: none;
   cursor: pointer;
   opacity: 0.8;
   position: fixed;
-  bottom: 7.5em;
-  right: 1.5em;
-  width: 4.5em;
-  height: 4.5em;
+  bottom: 85px;
+  right: 20px;
+  width: 55px;
+  height: 55px;
   border-radius: 50%;
 }
 
@@ -723,11 +723,6 @@ form div {
 /* Add a red background color to the cancel button */
 .form-container .cancel {
   background-color: red;
-}
-
-/* Add some hover effects to buttons */
-.form-container .btn:hover, .open-button:hover, .top {
-  opacity: 1;
 }
 
 /* Responsive media queries */

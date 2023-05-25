@@ -49,3 +49,15 @@ if (progressItems === totalItems) {
   const progressTotal = document.querySelector('.progress-total');
   progressTotal.style.display = 'none'; // Hide the progress total
 }
+
+
+
+
+// CHAT
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}

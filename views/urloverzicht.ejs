@@ -13,7 +13,7 @@
             </svg>
         </div>
     </div>
-    <div class="partner-container">
+    <div class="partner-container-details">
         <% partnerData.urls.forEach(url=> { %>
             <div class="partner-cube">
                 <div class="partner-content">
@@ -26,21 +26,20 @@
                                 <% progress = 0; %>
                                 <% } %>
 
-                                <div class="progress-circle">
-                                    <svg class="progress-svg">
-                                      <circle class="progress-path" cx="50%" cy="50%" r="40"></circle>
-                                      <circle class="progress-fill" cx="50%" cy="50%" r="40"></circle>
-                                    </svg>
-                                    <div class="progress-text">
-                                      <span id="progressNumber" class="progress-value"><%= progress %></span><span class="progress-total">/75</span>
-                                    </div>
-                                    <img class="completion-image" src="https://i.imgur.com/kTG7L06.png" alt="Checkmark">
-                                  </div>
-
+                                <a href="/toolboard?id=<%= url.id %>"><button class="toolboard-button">Toolboard</button></a>
                 </div>
-                <section class="check-button">
-                    <a href="/toolboard?id=<%= url.id %>"><img src="/assets/globe-outline.svg" class="globe" alt="check button"></a>
-                </section>
+
+                <div class="progress-circle">
+                    <svg class="progress-svg">
+                      <circle class="progress-path" cx="50%" cy="50%" r="40"></circle>
+                      <circle class="progress-fill" cx="50%" cy="50%" r="40"></circle>
+                    </svg>
+                    <div class="progress-text">
+                      <span id="progressNumber" class="progress-value"><%= progress %></span><span class="progress-total">/75</span>
+                    </div>
+                    <img class="completion-image" src="https://i.imgur.com/kTG7L06.png" alt="Checkmark">
+                  </div>
+
             </div>
             <%})%>
     </div>

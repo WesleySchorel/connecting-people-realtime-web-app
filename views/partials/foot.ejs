@@ -6,15 +6,19 @@
   <button class="open-button" onclick="openForm()">Chat</button>
   
   <div class="chat-popup" id="myForm">
-    <form action="/action_page.php" class="form-container">
-      <h1>Chat</h1>
-  
-      <label for="msg"><b>Message</b></label>
-      <textarea placeholder="Type message.." name="msg" required></textarea>
-  
-      <button type="submit" class="btn">Send</button>
-      <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-    </form>
+    <section class="form-container">
+      <img src="./assets/vervoerregio-logo.svg" class="logo-chat" alt="">
+    <section class="chatroom">
+      <h1 class="chat-h1">Chatroom!</h1>
+      <ul class="chat-container"></ul>
+      <form class="form">
+        <input type="text" autocomplete="off">
+        <button><span>Send</span></button>
+      </form>
+      <br>
+    </section>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </section>
   </div>
   
 <a class="top" href="#">

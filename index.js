@@ -63,11 +63,6 @@ io.on('connection', (socket) => {
 })
 
 
-// Maak een route voor de index
-app.get('/', function (req, res) {
-  res.render('index', {active: '/'})
-})
-
 app.get('/projectboard', function (req, res) {
   res.render('projectboard', { partner_data, active: '/projectboard'})
 })

@@ -1,5 +1,21 @@
-<%- include('./partials/head') %>
-<%- include('./partials/navigation') %>
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta name="keywords" content="Vervoerregio Amsterdam WCAG" />
+    <meta name="description" content="Vervoerregio Amsterdam WCAG" />
+    <meta name="author" content="Rick Vellinga, Daan Carstens en Wesley Schorel" />
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Vervoerregio Amsterdam</title>
+    <link rel="icon" type="image/png" href="assets/favicon.svg" />
+    <script src="https://cdn.socket.io/4.6.0/socket.io.min.js" integrity="sha384-c79GN5VsunZvi+Q/WObgk2in0CbZsHnjEqvFxC5DxHn9lTfNce2WW6h2pH6u/kF+" crossorigin="anonymous"></script>
+    <script src="/chat.js"></script>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
 
 <main>
     <section class="hero-banner" id="index">
@@ -65,4 +81,35 @@
     </section>
 </main>
 
-<%- include('./partials/foot') %>
+<style>
+</style>
+</head>
+<body>
+
+<button class="open-button" onclick="openForm()">Chat</button>
+
+<div class="chat-popup" id="myForm">
+  <section class="form-container">
+    <img src="./assets/vervoerregio-logo.svg" class="logo-chat" alt="">
+  <section class="chatroom">
+    <h1 class="chat-h1">Chatroom!</h1>
+    <ul class="chat-container"></ul>
+    <form class="chat">
+      <input type="text" autocomplete="off">
+      <button id="formSend"><span>Send</span></button>
+    </form>
+    <br>
+  </section>
+  <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+</section>
+</div>
+
+<a class="top" href="#">
+  <svg id="Layer_1" fill="white" width="1.5rem" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 115.4 122.88">
+  <path d="M24.94,67.88A14.66,14.66,0,0,1,4.38,47L47.83,4.21a14.66,14.66,0,0,1,20.56,0L111,46.15A14.66,14.66,0,0,1,90.46,67.06l-18-17.69-.29,59.17c-.1,19.28-29.42,19-29.33-.25L43.14,50,24.94,67.88Z"/>
+  </svg>
+</a> 
+
+<script src="/script.js"></script>
+</body>
+</html>

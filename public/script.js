@@ -4,22 +4,9 @@ function scrollFunction() {
 }
 
 document.getElementById("formSend").addEventListener("click", function(event){
-  event.preventDefault()
+  // event.preventDefault()
   // console.log("hi");
 });
-
-if (window.navigator.onLine == true) {
-    document.querySelector(".online").style.display="grid";
-} else {
-    document.querySelector(".online").style.display="none";
-    document.querySelector(".offline").style.display="flex";
-}
-
-var loader = document.getElementById("preloader");
-window.addEventListener("load", function(){
-  loader.style.display = "none";
-})
-
 
 // PROGRESS
 const totalItems = 75; // Set the total number of items
@@ -56,7 +43,17 @@ if (progressItems === totalItems) {
 }
 
 
+if (window.navigator.onLine == true) {
+    document.querySelector(".online").style.display="grid";
+} else {
+    document.querySelector(".online").style.display="none";
+    document.querySelector(".offline").style.display="flex";
+}
 
+var loader = document.getElementById("preloader");
+window.addEventListener("load", function(){
+  loader.style.display = "none";
+})
 
 // CHAT
 function openForm() {

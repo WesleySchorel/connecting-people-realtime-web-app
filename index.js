@@ -25,6 +25,10 @@ app.use(express.urlencoded({ extended: true }))
 // Gebruik de map 'public' voor statische resources
 app.use(express.static('public'))
 
+app.get('/', function (req, res) {
+  res.render('index', {active: '/'})
+})
+
 app.get('/projectboard', function (req, res) {
   res.render('projectboard', { partner_data, active: '/projectboard'})
 })

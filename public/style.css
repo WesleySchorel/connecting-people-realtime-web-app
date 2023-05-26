@@ -704,7 +704,7 @@ form div {
   bottom: .5em;
   right: .5em;
   border: 3px solid #f1f1f1;
-  z-index: 1;
+  z-index: 10;
 }
 
 /* Add styles to the form container */
@@ -849,7 +849,7 @@ section form > button:active {
 
 .logo-chat {
   width: 12em;
-  margin-bottom: 10px;
+  margin-bottom: 9px;
 }
 
 /* Responsive media queries */

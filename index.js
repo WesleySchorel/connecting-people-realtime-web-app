@@ -1,8 +1,4 @@
 // Importeer express uit de node_modules map
-import * as path from 'path'
-
-import { Server } from 'socket.io'
-import { createServer } from 'http'
 import express from 'express'
 import fetch from 'node-fetch';
 
@@ -18,15 +14,6 @@ const check_data = await fetch(checks). then((response) => response.json())
 
 // Maak een nieuwe express app aan
 const app = express()
-const http = createServer(app)
-const io = new Server(http)
-
-const historySize = 50
-
-let history = []
-let membersLoaded = false
-let htmlMemberList = null
-
 
 // Stel ejs in als template engine en geef de 'views' map door
 app.set('view engine', 'ejs')
@@ -36,32 +23,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
 // Gebruik de map 'public' voor statische resources
-app.use(express.static(path.resolve('public')))
-
-io.on('connection', (socket) => {
-  // Log de connectie naar console
-  console.log('a user connected')
-  // Stuur de historie door, let op: luister op socket, emit op io!
-  io.emit('history', history)
-
-  // Luister naar een message van een gebruiker
-  socket.on('message', (message) => {
-    // Check de maximum lengte van de historie
-    while (history.length > historySize) {
-      history.shift()
-    }
-    // Voeg het toe aan de historie
-    history.push(message)
-    // Verstuur het bericht naar alle clients
-    io.emit('message', message)
-  })
-
-  // Luister naar een disconnect van een gebruiker
-  socket.on('disconnect', () => {
-    console.log('user disconnected')
-  })
-})
-
+app.use(express.static('public'))
 
 // Maak een route voor de index
 app.get('/', function (req, res) {
@@ -137,26 +99,10 @@ app.post('/urltoevoegen', function(req, res) {
 app.set('port', process.env.PORT || 8000)
 
 // Start express op, haal het ingestelde poortnummer op
-http.listen(app.get('port'), function () {
+app.listen(app.get('port'), function () {
   // Toon een bericht in de console en geef het poortnummer door
   console.log(`Application started on http://localhost:${app.get('port')}`)
 })
-
-function renderMembers(memberList) {
-  return memberList
-    .filter((member) => member.role.includes('student'))
-    .map((member) => renderMember(member))
-    .reduce((output, member) => output + member)
-}
-
-function renderMember(member) {
-  return `
-    <article>
-      <h2>${member.name}</h2>
-      <p>${member.bio ? member.bio.html : ''}</p>
-    </article>
-  `
-}
 
 async function fetchJson(url) {
   return await fetch(url)

@@ -4,7 +4,7 @@ function scrollFunction() {
 }
 
 document.getElementById("formSend").addEventListener("click", function(event){
-  // event.preventDefault()
+  event.preventDefault()
   // console.log("hi");
 });
 

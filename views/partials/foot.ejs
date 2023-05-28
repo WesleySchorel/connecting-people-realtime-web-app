@@ -1,32 +1,4 @@
-<style>
-  </style>
-  </head>
-  <body>
-  
-  <button class="open-button" onclick="openForm()">Chat</button>
-  
-  <div class="chat-popup" id="myForm">
-    <section class="form-container">
-      <img src="./assets/vervoerregio-logo.svg" class="logo-chat" alt="">
-    <section class="chatroom">
-      <h1 class="chat-h1">Chatroom!</h1>
-      <ul class="chat-container"></ul>
-      <form class="form">
-        <input type="text" autocomplete="off">
-        <button id="formSend"><span>Send</span></button>
-      </form>
-      <br>
-    </section>
-    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-  </section>
-  </div>
-  
-<a class="top" href="#">
-    <svg id="Layer_1" fill="white" width="1.5rem" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 115.4 122.88">
-    <path d="M24.94,67.88A14.66,14.66,0,0,1,4.38,47L47.83,4.21a14.66,14.66,0,0,1,20.56,0L111,46.15A14.66,14.66,0,0,1,90.46,67.06l-18-17.69-.29,59.17c-.1,19.28-29.42,19-29.33-.25L43.14,50,24.94,67.88Z"/>
-    </svg>
-  </a> 
-  <script src="/chat.js"></script>
-  <script src="/script.js"></script>
-</body>
+<%- include('realtime') %>
+<script src="/script.js"></script>    
+    </body>
 </html>

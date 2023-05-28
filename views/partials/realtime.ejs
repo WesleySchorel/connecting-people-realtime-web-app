@@ -1,0 +1,31 @@
+<button class="open-button" onclick="openForm()">Chat</button>
+  
+  <div class="chat-popup" id="myForm">
+    <section class="form-container">
+        <div class="logo-container">
+            <img src="./assets/vervoerregio-logo.svg" class="logo-chat" alt="Vervoerregio Amsterdam logo">
+            <img class="close-icon" src="./assets/close.svg" onclick="closeForm()" alt="Sluit icoon">
+        </div>      
+
+      <section class="realtime">
+
+        <!-- State messages -->
+        <span class="loading">Berichten aan het inladen...</span>
+        <span class="empty">Er zijn nog geen berichten hier, typ iets om te kijken of er iemand reageert.</span>
+        <span class="offline">Er gaat iets mis met de verbinding, we proberen de connectie te herstellen...</span>
+
+        <ul></ul>
+
+        <form class="chat">
+          <input class="berichten" type="text" autocomplete="off" />
+          <button><span>Send</span></button>
+        </form>
+      </section>
+  </section>
+  </div>
+
+  <a class="top" href="#">
+    <svg id="Layer_1" fill="white" width="1.5rem" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 115.4 122.88">
+    <path d="M24.94,67.88A14.66,14.66,0,0,1,4.38,47L47.83,4.21a14.66,14.66,0,0,1,20.56,0L111,46.15A14.66,14.66,0,0,1,90.46,67.06l-18-17.69-.29,59.17c-.1,19.28-29.42,19-29.33-.25L43.14,50,24.94,67.88Z"/>
+    </svg>
+  </a> 

@@ -17,7 +17,7 @@
     "express",
     "socket.io"
   ],
-  "author": "Justus Sturkenboom <justus@ju5tu5.nl>",
+  "author": "Rick Vellinga <justus@ju5tu5.nl>",
   "license": "GPL-3.0",
   "bugs": {
     "url": "https://github.com/ju5tu5/barebonechat/issues"

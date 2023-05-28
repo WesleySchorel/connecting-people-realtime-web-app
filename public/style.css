@@ -892,11 +892,9 @@ section form > button:active {
 section.realtime {
   width: 20rem;
   height: 30rem;
-  /* background: rgb(239, 238, 238); */
   background-color: transparent;
   border-radius: 2rem;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  /* box-shadow: 0.8rem 0.8rem 1.6rem 0 rgba(206, 205, 205, 0.5), -0.8rem -0.8rem 1.6rem 0 rgba(255, 255, 255, 0.5); */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1026,6 +1024,16 @@ span.offline {
   display: none;
 }
 
+.name-form {
+  width: 20rem;
+  height: 30rem;
+
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 @keyframes breathe {
   0% {
     transform: scale(0.9);
@@ -1039,6 +1047,10 @@ span.offline {
   100% {
     transform: scale(0.9);
   }
+}
+
+#currentTime {
+  color: white;
 }
 
 

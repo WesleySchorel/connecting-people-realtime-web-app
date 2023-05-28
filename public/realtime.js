@@ -87,6 +87,13 @@ ioServer.io.on('reconnect_failed', () => {
  * @param {*} message the message to append
  */
 function addMessage(message) {
+  const currentTime = new Date().toLocaleTimeString('nl-NL', { hour: 'numeric', minute: 'numeric' });
+
+  const timeElement = document.createElement('span');
+
+  timeElement.classList.add('own-message')
+
   messages.appendChild(Object.assign(document.createElement('li'), { textContent: message }))
+  messages.appendChild(Object.assign(timeElement, { textContent: currentTime }));
   messages.scrollTop = messages.scrollHeight
 }

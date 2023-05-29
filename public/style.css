@@ -939,6 +939,7 @@ section.realtime ul > li {
   font-size: 0.8rem;
   background-color: #7A7A7A;
   margin: 1em;
+  margin-bottom: .1em;
   border-radius: 15px;
   text-transform: capitalize;
 }
@@ -1022,6 +1023,14 @@ span.empty {
 span.offline {
   color: red;
   display: none;
+}
+
+.own-message {
+  margin: 1em;
+  margin-top: 0;
+  margin-right: 1.1em;
+  color: black;
+  font-size: .8em;
 }
 
 .name-form {

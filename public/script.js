@@ -10,3 +10,10 @@ function openForm() {
   function closeForm() {
     document.getElementById("myForm").style.display = "none";
   }
+
+  const observer = new IntersectionObserver(
+    changeColor,
+    { rootMargin: "-50px" }
+  )
+  
+  observer.observe(document.getElementById("progressie"))

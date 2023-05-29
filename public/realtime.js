@@ -1,9 +1,7 @@
 let ioServer = io()
 let messages = document.querySelector('section.realtime ul')
 let input = document.querySelector('input.berichten')
-let naam = document.querySelector('#naam')
-let bericht = document.querySelector('#bericht')
-const logo = document.querySelector('.logo')
+
 
 // State messages
 const loadingState = document.querySelector('span.loading')
@@ -24,30 +22,22 @@ document.querySelector('form.chat').addEventListener('submit', (event) => {
   }
 })
 
-ioServer.on('whatever', (message) => {
-  addMessage(message)
-})
-
-ioServer.on('connectionCount', (count) => {
-  const connectionCountElement = document.querySelector('#connection-count')
-  if (connectionCountElement) {
-    connectionCountElement.textContent = `Personen online: ${count}`
-  }
-
-  logo.classList.add('animatie')
-
-  // Verwijder de 'animatie' klasse na een korte vertraging
-  setTimeout(() => {
-    logo.classList.remove('animatie');
-  }, 1000); // Verander de vertraging (in milliseconden) naar jouw wens
-})
-
+// Luister naar de historie van de chat
 ioServer.on('history', (history) => {
-  history.forEach((message) => {
-    addMessage(`${message.naam}: ${message.bericht}`)
-  })
-})
+  // Als er geen historie is tonen we de empty state
+  if (history.length === 0) {
+    loadingState.style.display = 'none'
+    emptyState.style.display = 'inline'
 
+    // Er zijn berichten, haal de states weg en loop ze op het scherm
+  } else {
+    loadingState.style.display = 'none'
+    emptyState.style.display = 'none'
+    history.forEach((message) => {
+      addMessage(message)
+    })
+  }
+})
 
 // Luister naar berichten van de server
 ioServer.on('message', (message) => {
@@ -100,11 +90,10 @@ function addMessage(message) {
   const currentTime = new Date().toLocaleTimeString('nl-NL', { hour: 'numeric', minute: 'numeric' });
 
   const timeElement = document.createElement('span');
-  const messageElement = document.createElement('li');
-  messageElement.classList.add('own-message')
-  timeElement.classList.add('time-message')
 
-  messages.appendChild(Object.assign(messageElement, { textContent: message }))
+  timeElement.classList.add('own-message')
+
+  messages.appendChild(Object.assign(document.createElement('li'), { textContent: message }))
   messages.appendChild(Object.assign(timeElement, { textContent: currentTime }));
   messages.scrollTop = messages.scrollHeight
 }

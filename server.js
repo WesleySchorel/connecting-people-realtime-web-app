@@ -32,9 +32,6 @@ const historySize = 50
 
 let history = []
 
-let connections = 0
-
-
 app.set('view engine', 'ejs')
 app.set('views', './views')
 
@@ -67,7 +64,7 @@ let id = request.query.id || "clf7zms5va5670bw8rb7gwll2"
 //   const checkURL = 'https://api.vervoerregio-amsterdam.fdnd.nl/api/v1/checks'
 //   postJson(checkURL, req.body).then((data) => {
 //     let newCheck = { ... req.body }
-//    
+//     console.log(req.body)
 //     if (data.data) {
 //       res.redirect('/') 
 //     } else {
@@ -112,11 +109,8 @@ app.post('/urltoevoegen', function(req, res) {
 // Start de socket.io server op
 ioServer.on('connection', (client) => {
   // Log de connectie naar console
-  connections++
 
   console.log(`user ${client.id} connected`)
-
-  ioServer.emit('connectionCount', connections);
 
   // Stuur de history
   client.emit('history', history)
@@ -137,11 +131,8 @@ ioServer.on('connection', (client) => {
   // Luister naar een disconnect van een gebruiker
   client.on('disconnect', () => {
     // Log de disconnect
-    connections--
 
     console.log(`user ${client.id} disconnected`)
-
-    ioServer.emit('connectionCount', connections);
   })
 })
 

@@ -568,36 +568,6 @@ form div {
   display: none;
 }
 
-/* Offline */
-
-.offline {
-  margin: 6.5em auto 3em auto;
-  width: 80%;
-  height: 100%;
-  display: none;
-  align-items: center;
-  justify-content: center;
-}
-
-.offline div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.offline div h3 {
-  color: var(--c-pink);
-}
-
-.offline div .add-button {
-  width: 11rem;
-}
-
-.offline-img {
-  width: 20em;
-}
-
 /* Preloader */
 
 #preloader{

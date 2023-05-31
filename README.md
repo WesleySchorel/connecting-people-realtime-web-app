@@ -45,6 +45,12 @@ Progressive Enhancement is een ontwerpprincipe voor websites die ervoor zorgt da
 
 Op de website hebben wij de toolboard pagina gemaakt en daarin rekening gehouden met Progressive Enhancement. Wij zijn begonnen met een lege HTML pagina en daarin eerst een summary/detail element ingezet zodat wij een altijd werkende dropdown menu kregen die ook werkt wanneer de JS dus niet werkt, vervolgens zijn wij bezig geweest om dit te stylen zodat het er net en goed uit kwam te zien. Nadat dit was gedaan hebben wij met client-side JS ervoor gezorgd dat je altijd maar 1 detail/summary element open kan hebben staan en dat wanneer je er 1 sluit je naar de bovenkant gaat van degene die je hebt geopent. 
 
+### Realtime Chat & UI States
+
+Wij hebben een chat toegevoegd waarmee medewerkers van vervoerregio met elkaar kunnen communiceren als ze aan de zelfde pagina zouden werken.
+
+Deze chat hebben wij gemaakt met Socket en is gebasseerd op de le chat website van Justus Sturkenboom. Er zijn nog een paar extra dingen die wij hebben toegevoegd op de website namelijk, een functie om de tijd te zien van wanneer een bericht is gepost & hebben wij UI States toegevoegd. Als UI States hebben wij een error, ideal, loading en empty state.
+
 ### Rest API
 
 In dit project maak ik gebruik van de REST API for Toolgankelijkheid van Vervoerregio Amsterdam. De documentatie van deze Api is te vinden op: https://api.vervoerregio-amsterdam.fdnd.nl/

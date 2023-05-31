@@ -55,7 +55,7 @@ Deze chat hebben wij gemaakt met Socket en is gebasseerd op de le chat website v
 
 Wireflow en Breakddown-schets van de connecting-people-ui-stack deeltaak. Hier hebben wij een wireflow en breakdown schets gemaakt met verschillende states.
 
-https://media.discordapp.net/attachments/1082263300424876104/1108333974507507822/breakdown.jpg?width=847&height=580 
+![image](https://github.com/RickVellingaa/connecting-people-realtime-web-app/assets/112857487/ac244447-e2d3-4c60-9217-ef3f9dded1ef)
 
 ### Rest API
 

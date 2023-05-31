@@ -1,33 +1,32 @@
 {
-  "name": "performance-matters-optimized-website",
+  "name": "barebonechat",
   "version": "1.0.0",
-  "description": "Maak met een team een website voor een opdrachtgever door verschillende performance technieken toe te passen.",
-  "main": "index.js",
+  "description": "It's a barebone chat app used as an example in a course on realtime web apps.",
   "type": "module",
-  "directories": {
-    "doc": "docs"
-  },
+  "main": "server.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/WesleySchorel/performance-matters-optimized-website.git"
+    "url": "git+https://github.com/ju5tu5/barebonechat.git"
   },
   "keywords": [
-    "node"
+    "express",
+    "socket.io"
   ],
-  "author": "R. Vellinga, D. Carstens, W. Schorel",
-  "license": "ISC",
+  "author": "Rick Vellinga <justus@ju5tu5.nl>",
+  "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/WesleySchorel/performance-matters-optimized-website/issues"
+    "url": "https://github.com/ju5tu5/barebonechat/issues"
   },
-  "homepage": "https://github.com/WesleySchorel/performance-matters-optimized-website#readme",
+  "homepage": "https://github.com/ju5tu5/barebonechat#readme",
   "dependencies": {
     "dotenv": "^16.0.3",
-    "ejs": "^3.1.8",
-    "express": "^4.18.2",
-    "node-fetch": "^2.6.11"
+    "ejs": "^3.1.9",
+    "express": "^4.17.1",
+    "node-fetch": "^3.3.1",
+    "socket.io": "^4.6.1"
   }
 }

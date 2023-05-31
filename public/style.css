@@ -649,6 +649,13 @@ form div {
   color: #000;
 }
 
+span.offline {
+  margin: 5px 30px 30px 30px;
+    height: 1em;
+    padding: 0px;
+    display: inline;
+}
+
 .progress-value {
   display: inline-block;
   margin-right: 5px;

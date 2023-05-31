@@ -51,6 +51,12 @@ Wij hebben een chat toegevoegd waarmee medewerkers van vervoerregio met elkaar k
 
 Deze chat hebben wij gemaakt met Socket en is gebasseerd op de le chat website van Justus Sturkenboom. Er zijn nog een paar extra dingen die wij hebben toegevoegd op de website namelijk, een functie om de tijd te zien van wanneer een bericht is gepost & hebben wij UI States toegevoegd. Als UI States hebben wij een error, ideal, loading en empty state.
 
+### UI Stack
+
+Wireflow en Breakddown-schets van de connecting-people-ui-stack deeltaak. Hier hebben wij een wireflow en breakdown schets gemaakt met verschillende states.
+
+https://media.discordapp.net/attachments/1082263300424876104/1108333974507507822/breakdown.jpg?width=847&height=580 
+
 ### Rest API
 
 In dit project maak ik gebruik van de REST API for Toolgankelijkheid van Vervoerregio Amsterdam. De documentatie van deze Api is te vinden op: https://api.vervoerregio-amsterdam.fdnd.nl/

@@ -38,6 +38,10 @@ nav {
   z-index: 100;
 }
 
+#progressie {
+  top: 125px;
+}
+
 nav div {
   width: 100%;
   display: flex;

@@ -70,5 +70,5 @@ Download de aanbevolen versie op nodejs.org en installeer vanaf deze wwebsite de
 Open de terminal in Visual Studio Code en installeer Node doormiddel van het commando npm init. Voer hierna npm install uit. Om de pagina te open start je een server op door middel van npm start. Als de server weer gesloten moet worden kan je control + c / ^c gebruiken.
 
 ## Bronnen
-Socket Chat: https://socket.io/get-started/chat
-Creating a new app: https://adaptable.io/docs/creating-a-new-app
+* Socket Chat: https://socket.io/get-started/chat
+* Creating a new app: https://adaptable.io/docs/creating-a-new-app
